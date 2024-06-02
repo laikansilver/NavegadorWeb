@@ -1,0 +1,32 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:controller="org.example.navegadorweb.NavegadorController"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="800" prefHeight="600">
+
+    <top>
+        <HBox spacing="10">
+            <TextField fx:id="urlField" promptText="Enter URL"/>
+            <Button fx:id="goButton" text="Go" onAction="#goToUrl"/>
+            <Button fx:id="backButton" text="Back" onAction="#goBack"/>
+            <Button fx:id="forwardButton" text="Forward" onAction="#goForward"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="New Tab">
+                <content>
+                    <WebView fx:id="webView"/>
+                </content>
+            </Tab>
+        </TabPane>
+    </center>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</BorderPane>

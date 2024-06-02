@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane style="-fx-background-color: linear-gradient(to bottom right, #bb71f3, #3d4d91);" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="current" style="-fx-font-family: &quot;Helvetica Neue&quot;, &quot;Futura&quot;, &quot;Trebuchet MS&quot;, Arial;" styleClass="music-header" text="current" />
+      <Label fx:id="title" layoutX="201.0" layoutY="115.0" style="-fx-font-family: &quot;Helvetica Neue&quot;, &quot;Futura&quot;, &quot;Trebuchet MS&quot;, Arial;" styleClass="music-header" text="current" />
+      <Label fx:id="max" layoutX="201.0" layoutY="115.0" style="-fx-font-family: &quot;Helvetica Neue&quot;, &quot;Futura&quot;, &quot;Trebuchet MS&quot;, Arial;" styleClass="music-header" text="current" />
+      <ImageView fx:id="image" fitHeight="250.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <image>
+            <Image url="@../assets/images/music_default.jpg" />
+         </image></ImageView>
+      <HBox fx:id="bottom" alignment="CENTER">
+         <children>
+            <Button fx:id="playlist" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/playlist.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="prev" layoutX="10.0" layoutY="10.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/prev.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="play" layoutX="103.0" layoutY="10.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="next" layoutX="63.0" layoutY="10.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/next.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button layoutX="141.0" layoutY="10.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/volume.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+      </HBox>
+   </children>
+</StackPane>

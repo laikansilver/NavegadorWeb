@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.navegadorweb.NavegadorController">
+    <top>
+        <HBox prefHeight="31.0" prefWidth="800.0" spacing="10">
+            <Button fx:id="backButton" onAction="#goBack" text="&lt;-" />
+            <Button fx:id="forwardButton" onAction="#goForward" text="-&gt;" />
+            <TextField fx:id="urlField" prefHeight="26.0"  prefWidth="523.0" onAction="#handleGoAction" />
+            <TextField fx:id="searchField" prefHeight="26.0" prefWidth="199.0" onAction="#handleSearchAction" />
+        </HBox>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="Nueva pestaña">
+                <content>
+                    <WebView fx:id="webView" />
+                </content>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

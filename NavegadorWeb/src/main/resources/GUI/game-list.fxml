@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox style="-fx-background-color: white;" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameController">
+   <children>
+      <ScrollPane minWidth="-Infinity" prefWidth="250.0" styleClass="bg-color-4" />
+      <ScrollPane styleClass="planet-list">
+         <content>
+            <VBox fx:id="title" alignment="CENTER">
+               <children>
+                  <Label fx:id="title" text="L A   L I S T E   D E S   J E U X " style="-fx-font-size: 34px; -fx-font-family: 'Dosis', sans-serif;" />
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="100.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</HBox>

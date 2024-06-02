@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox alignment="CENTER_LEFT" minWidth="300.0" styleClass="card-body">
+         <children>
+            <Label fx:id="name" style="-fx-font-family: 'Dosis', sans-serif;" styleClass="card-heading" text="Label" />
+            <Label fx:id="date" layoutX="10.0" layoutY="10.0" text="Joué le :">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CALENDAR" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="duration" layoutX="60.0" layoutY="145.0" text="Durée :">
+               <graphic>
+                  <MaterialDesignIconView glyphName="TIMER" styleClass="material" />
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="banBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary-outline" />
+         </styleClass>
+         <HBox.margin>
+            <Insets right="30.0" />
+         </HBox.margin>
+         <graphic>
+            <FontAwesomeIconView glyphName="BAN" size="15" styleClass="fa" wrappingWidth="12.0" />
+         </graphic>
+      </Button>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="card-default" />
+      <String fx:value="card-horizontal" />
+   </styleClass>
+</HBox>

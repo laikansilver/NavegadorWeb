@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox fx:id="card" styleClass="card" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameController">
+   <children>
+      <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Rectangle fx:id="imageHolder" height="200" arcHeight="30.0" arcWidth="30.0" fill="#1f93ff00" stroke="BLACK" strokeMiterLimit="5.0" strokeType="INSIDE" strokeWidth="5.0" styleClass="card-image" />
+            <Rectangle fx:id="overlay" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="card-image-overlay" width="500.0" />
+            <ImageView fx:id="noPhoto" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="-25.0">
+               <image>
+                  <Image url="@../assets/images/default_game.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <VBox styleClass="card-body">
+         <children>
+            <Label fx:id="name" styleClass="card-heading" text="Label" />
+            <Label fx:id="episodes" text="Label" />
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>
